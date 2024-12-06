@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <!-- Este archivo define macros Xacro para calcular propiedades inerciales 
+         estándar basadas en las formas geométricas más comunes.
+         Las macros permiten parametrizar los cálculos de masa e inercia de 
+         elementos como esferas, cajas y cilindros.
+         Estas propiedades son esenciales para las simulaciones físicas en Gazebo. -->
+
+    <!-- Macro para definir la inercia de una esfera -->
+    <!-- Parámetros:
+         - mass: Masa de la esfera.
+         - radius: Radio de la esfera.
+         - *origin: (Opcional) Bloque que define el origen del centro de masa.
+       Cálculo del momento de inercia: 
+         I = (2/5) * masa * (radio^2) para todos los ejes. -->
+    <xacro:macro name="inertial_sphere" params="mass radius *origin">
+        <inertial>
+            <!-- Inserta el bloque opcional para especificar el origen -->
+            <xacro:insert_block name="origin"/>
+            <mass value="${mass}" />
+            <inertia ixx="${(2/5) * mass * (radius*radius)}" ixy="0.0" ixz="0.0"
+                    iyy="${(2/5) * mass * (radius*radius)}" iyz="0.0"
+                    izz="${(2/5) * mass * (radius*radius)}" />
+        </inertial>
+    </xacro:macro>  
+
+    <!-- Macro para definir la inercia de una caja rectangular -->
+    <!-- Parámetros:
+         - mass: Masa de la caja.
+         - x, y, z: Dimensiones de la caja (ancho, alto y profundidad).
+         - *origin: (Opcional) Bloque que define el origen del centro de masa.
+       Cálculo del momento de inercia: 
+         Ixx = (1/12) * masa * (y^2 + z^2)
+         Iyy = (1/12) * masa * (x^2 + z^2)
+         Izz = (1/12) * masa * (x^2 + y^2) -->
+    <xacro:macro name="inertial_box" params="mass x y z *origin">
+        <inertial>
+            <!-- Inserta el bloque opcional para especificar el origen -->
+            <xacro:insert_block name="origin"/>
+            <mass value="${mass}" />
+            <inertia ixx="${(1/12) * mass * (y*y+z*z)}" ixy="0.0" ixz="0.0"
+                    iyy="${(1/12) * mass * (x*x+z*z)}" iyz="0.0"
+                    izz="${(1/12) * mass * (x*x+y*y)}" />
+        </inertial>
+    </xacro:macro>
+
+    <!-- Macro para definir la inercia de un cilindro -->
+    <!-- Parámetros:
+         - mass: Masa del cilindro.
+         - length: Longitud del cilindro.
+         - radius: Radio del cilindro.
+         - *origin: (Opcional) Bloque que define el origen del centro de masa.
+       Cálculo del momento de inercia:
+         Ixx = Iyy = (1/12) * masa * (3*radio^2 + longitud^2)
+         Izz = (1/2) * masa * (radio^2) -->
+    <xacro:macro name="inertial_cylinder" params="mass length radius *origin">
+        <inertial>
+            <!-- Inserta el bloque opcional para especificar el origen -->
+            <xacro:insert_block name="origin"/>
+            <mass value="${mass}" />
+            <inertia ixx="${(1/12) * mass * (3*radius*radius + length*length)}" ixy="0.0" ixz="0.0"
+                    iyy="${(1/12) * mass * (3*radius*radius + length*length)}" iyz="0.0"
+                    izz="${(1/2) * mass * (radius*radius)}" />
+        </inertial>
+    </xacro:macro>
+
+</robot>

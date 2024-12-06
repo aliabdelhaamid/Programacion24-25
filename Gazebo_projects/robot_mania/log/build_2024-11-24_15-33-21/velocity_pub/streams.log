@@ -1,0 +1,45 @@
+[0.246s] Invoking command in '/Users/aliabdelhamid/Programación/Gazebo_projects/robot_mania/build/velocity_pub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/Users/aliabdelhamid/ros2_jazzy/install/rosbag2_examples_py:/Users/aliabdelhamid/ros2_jazzy/install/launch_testing_examples:/Users/aliabdelhamid/ros2_jazzy/install/ros2bag:/Users/aliabdelhamid/ros2_jazzy/install/tracetools_test:/Users/aliabdelhamid/ros2_jazzy/install/tracetools_launch:/Users/aliabdelhamid/ros2_jazzy/install/topic_monitor:/Users/aliabdelhamid/ros2_jazzy/install/tf2_tools:/Users/aliabdelhamid/ros2_jazzy/install/examples_tf2_py:/Users/aliabdelhamid/ros2_jazzy/install/tf2_ros_py:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_pointcloud_publisher:/Users/aliabdelhamid/ros2_jazzy/install/sensor_msgs_py:/Users/aliabdelhamid/ros2_jazzy/install/quality_of_service_demo_py:/Users/aliabdelhamid/ros2_jazzy/install/ros2doctor:/Users/aliabdelhamid/ros2_jazzy/install/lifecycle_py:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_minimal_subscriber:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_minimal_service:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_minimal_publisher:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_minimal_client:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_executors:/Users/aliabdelhamid/ros2_jazzy/install/demo_nodes_py:/Users/aliabdelhamid/ros2_jazzy/install/ros2component:/Users/aliabdelhamid/ros2_jazzy/install/sros2:/Users/aliabdelhamid/ros2_jazzy/install/ros2trace:/Users/aliabdelhamid/ros2_jazzy/install/ros2topic:/Users/aliabdelhamid/ros2_jazzy/install/ros2test:/Users/aliabdelhamid/ros2_jazzy/install/ros2param:/Users/aliabdelhamid/ros2_jazzy/install/ros2lifecycle:/Users/aliabdelhamid/ros2_jazzy/install/ros2service:/Users/aliabdelhamid/ros2_jazzy/install/ros2run:/Users/aliabdelhamid/ros2_jazzy/install/ros2launch:/Users/aliabdelhamid/ros2_jazzy/install/ros2pkg:/Users/aliabdelhamid/ros2_jazzy/install/ros2node:/Users/aliabdelhamid/ros2_jazzy/install/ros2multicast:/Users/aliabdelhamid/ros2_jazzy/install/ros2interface:/Users/aliabdelhamid/ros2_jazzy/install/ros2action:/Users/aliabdelhamid/ros2_jazzy/install/ros2cli:/Users/aliabdelhamid/ros2_jazzy/install/launch_testing_ros:/Users/aliabdelhamid/ros2_jazzy/install/launch_ros:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_minimal_action_server:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_minimal_action_client:/Users/aliabdelhamid/ros2_jazzy/install/examples_rclpy_guard_conditions:/Users/aliabdelhamid/ros2_jazzy/install/action_tutorials_py:/Users/aliabdelhamid/ros2_jazzy/install/ament_uncrustify:/Users/aliabdelhamid/ros2_jazzy/install/tracetools_trace:/Users/aliabdelhamid/ros2_jazzy/install/tracetools_read:/Users/aliabdelhamid/ros2_jazzy/install/test_tracetools_launch:/Users/aliabdelhamid/ros2_jazzy/install/test_ros2trace:/Users/aliabdelhamid/ros2_jazzy/install/test_launch_ros:/Users/aliabdelhamid/ros2_jazzy/install/rpyutils:/Users/aliabdelhamid/ros2_jazzy/install/rosidl_runtime_py:/Users/aliabdelhamid/ros2_jazzy/install/rosidl_pycommon:/Users/aliabdelhamid/ros2_jazzy/install/rosidl_cli:/Users/aliabdelhamid/ros2_jazzy/install/launch_pytest:/Users/aliabdelhamid/ros2_jazzy/install/launch_testing:/Users/aliabdelhamid/ros2_jazzy/install/launch_yaml:/Users/aliabdelhamid/ros2_jazzy/install/launch_xml:/Users/aliabdelhamid/ros2_jazzy/install/launch:/Users/aliabdelhamid/ros2_jazzy/install/osrf_pycommon:/Users/aliabdelhamid/ros2_jazzy/install/domain_coordinator:/Users/aliabdelhamid/ros2_jazzy/install/ament_xmllint:/Users/aliabdelhamid/ros2_jazzy/install/ament_pyflakes:/Users/aliabdelhamid/ros2_jazzy/install/ament_pycodestyle:/Users/aliabdelhamid/ros2_jazzy/install/ament_pep257:/Users/aliabdelhamid/ros2_jazzy/install/ament_pclint:/Users/aliabdelhamid/ros2_jazzy/install/ament_package:/Users/aliabdelhamid/ros2_jazzy/install/ament_mypy:/Users/aliabdelhamid/ros2_jazzy/install/ament_lint_cmake:/Users/aliabdelhamid/ros2_jazzy/install/ament_flake8:/Users/aliabdelhamid/ros2_jazzy/install/ament_copyright:/Users/aliabdelhamid/ros2_jazzy/install/ament_lint:/Users/aliabdelhamid/ros2_jazzy/install/ament_index_python:/Users/aliabdelhamid/ros2_jazzy/install/ament_cpplint:/Users/aliabdelhamid/ros2_jazzy/install/ament_cppcheck:/Users/aliabdelhamid/ros2_jazzy/install/ament_clang_tidy:/Users/aliabdelhamid/ros2_jazzy/install/ament_clang_format SHLVL=2 VIRTUAL_ENV_PROMPT=(.ros2_venv) _=/usr/bin/env /opt/homebrew/bin/cmake /Users/aliabdelhamid/Programación/Gazebo_projects/robot_mania/src/velocity_pub -DCMAKE_INSTALL_PREFIX=/Users/aliabdelhamid/Programación/Gazebo_projects/robot_mania/install/velocity_pub
+[0.302s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.302s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.302s]   CMake.
+[0.302s] 
+[0.302s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.302s]   to tell CMake that the project requires at least <min> but has been updated
+[0.302s]   to work with policies introduced by <max> or earlier.
+[0.302s] 
+[0.302s] 
+[1.440s] -- The C compiler identification is AppleClang 16.0.0.16000026
+[1.847s] -- The CXX compiler identification is AppleClang 16.0.0.16000026
+[1.872s] -- Detecting C compiler ABI info
+[3.210s] -- Detecting C compiler ABI info - done
+[3.290s] -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+[3.291s] -- Detecting C compile features
+[3.292s] -- Detecting C compile features - done
+[3.297s] -- Detecting CXX compiler ABI info
+[4.605s] -- Detecting CXX compiler ABI info - done
+[4.685s] -- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
+[4.685s] -- Detecting CXX compile features
+[4.685s] -- Detecting CXX compile features - done
+[4.775s] -- Found ament_cmake: 2.5.0 (/Users/aliabdelhamid/ros2_jazzy/install/ament_cmake/share/ament_cmake/cmake)
+[6.071s] -- Found Python3: /Users/aliabdelhamid/.ros2_venv/bin/python3 (found version "3.11.10") found components: Interpreter
+[7.343s] -- Found rclcpp: 28.1.2 (/Users/aliabdelhamid/ros2_jazzy/install/rclcpp/share/rclcpp/cmake)
+[7.754s] -- Found rosidl_generator_c: 4.6.2 (/Users/aliabdelhamid/ros2_jazzy/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+[7.859s] -- Found rosidl_generator_cpp: 4.6.2 (/Users/aliabdelhamid/ros2_jazzy/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake)
+[7.999s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+[8.129s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+[8.510s] -- Found rmw_implementation_cmake: 7.3.1 (/Users/aliabdelhamid/ros2_jazzy/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+[8.560s] -- Found rmw_fastrtps_cpp: 8.4.0 (/Users/aliabdelhamid/ros2_jazzy/install/rmw_fastrtps_cpp/share/rmw_fastrtps_cpp/cmake)
+[9.541s] -- Found OpenSSL: /opt/homebrew/Cellar/openssl@3/3.4.0/lib/libcrypto.dylib (found version "3.4.0")
+[9.659s] -- Found FastRTPS: /Users/aliabdelhamid/ros2_jazzy/install/fastrtps/include (Required is at least version "2.13")
+[9.762s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[10.021s] -- Found geometry_msgs: 5.3.5 (/Users/aliabdelhamid/ros2_jazzy/install/geometry_msgs/share/geometry_msgs/cmake)
+[10.116s] -- Found ament_lint_auto: 0.17.0 (/Users/aliabdelhamid/ros2_jazzy/install/ament_lint_auto/share/ament_lint_auto/cmake)
+[10.591s] -- Added test 'copyright' to check source files copyright and LICENSE
+[10.598s] -- Added test 'flake8' to check Python code syntax and style conventions
+[10.598s] -- Configured 'flake8' exclude dirs and/or files: 
+[10.604s] -- Added test 'lint_cmake' to check CMake code style
+[10.609s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[10.615s] -- Added test 'xmllint' to check XML markup files
+[10.626s] -- Configuring done (10.3s)
+[10.643s] -- Generating done (0.0s)
+[10.643s] -- Build files have been written to: /Users/aliabdelhamid/Programación/Gazebo_projects/robot_mania/build/velocity_pub

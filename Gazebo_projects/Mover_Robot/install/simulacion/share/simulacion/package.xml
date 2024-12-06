@@ -1,0 +1,42 @@
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!-- Define que este archivo sigue el formato de paquete ROS 2 versión 3. -->
+
+<package format="3">
+  <!-- Nombre del paquete -->
+  <name>simulacion</name>
+
+  <!-- Versión del paquete -->
+  <version>0.1.0</version>
+
+  <!-- Descripción breve del paquete -->
+  <description>Ejemplo de nodo controlador en C++ y Python usando ROS 2</description>
+
+  <!-- Mantenedor del paquete con correo electrónico de contacto -->
+  <maintainer email="ejemplo@ejemplo.com">ejemplo</maintainer>
+
+  <!-- Licencia bajo la cual se distribuye el paquete -->
+  <license>BSD-2.0</license>
+
+  <!-- Dependencia de herramienta de construcción (ament_cmake es obligatoria para construir paquetes con ament) -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Dependencias necesarias durante la construcción del paquete -->
+  <build_depend>rclcpp</build_depend> <!-- Biblioteca principal de ROS 2 en C++ -->
+  <build_depend>geometry_msgs</build_depend> <!-- Mensajes de geometría para comandos de movimiento -->
+
+  <!-- Dependencias necesarias durante la ejecución del paquete -->
+  <exec_depend>rclcpp</exec_depend> <!-- Nodo ROS 2 en C++ -->
+  <exec_depend>geometry_msgs</exec_depend> <!-- Mensajes de geometría -->
+
+  <!-- Sección de exportación para definir configuraciones adicionales -->
+  <export>
+    <!-- Tipo de construcción que utiliza este paquete -->
+    <build_type>ament_cmake</build_type>
+
+    <!-- Configuración de Gazebo para agregar modelos al entorno de simulación -->
+    <gazebo_ros gazebo_model_path="${prefix}/robots"/>
+    <!-- `${prefix}` se resuelve en la ruta de instalación del paquete, donde se almacenan los modelos. -->
+  </export>
+</package>

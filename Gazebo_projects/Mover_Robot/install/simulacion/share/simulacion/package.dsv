@@ -1,0 +1,8 @@
+source;share/simulacion/hook/cmake_prefix_path.ps1
+source;share/simulacion/hook/cmake_prefix_path.dsv
+source;share/simulacion/hook/cmake_prefix_path.sh
+source;share/simulacion/local_setup.bash
+source;share/simulacion/local_setup.dsv
+source;share/simulacion/local_setup.ps1
+source;share/simulacion/local_setup.sh
+source;share/simulacion/local_setup.zsh

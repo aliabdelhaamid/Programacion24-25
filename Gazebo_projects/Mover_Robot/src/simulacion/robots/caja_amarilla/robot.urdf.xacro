@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!-- Declaración del XML. Define la versión y estructura general. -->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
+    <!-- Nodo raíz del archivo que define un robot. 
+         Incluye el espacio de nombres para usar macros `xacro`. -->
+
+    <!-- Inclusión de un archivo externo con definiciones básicas del robot. -->
+    <xacro:include filename="robot_core.xacro" />
+    <!-- 
+         Aquí se asume que `robot_core.xacro` contiene partes esenciales del robot,
+         como enlaces, articulaciones, sensores o cualquier configuración básica reutilizable.
+    -->
+
+    <!-- Configuración específica para Gazebo -->
+    <gazebo>
+        <!-- Plugin de Gazebo para activar sensores y usar Ogre2 como motor gráfico -->
+        <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors">
+            <render_engine>ogre2</render_engine>
+        </plugin>
+        
+        <!-- Plugin para publicar los estados de las articulaciones (`joint_states`) -->
+        <plugin filename="ignition-gazebo-joint-state-publisher-system" name="ignition::gazebo::systems::JointStatePublisher">
+            <topic>joint_states</topic>
+        </plugin>
+        <!-- 
+             Este plugin es esencial para que ROS 2 pueda leer los estados de las articulaciones y publicarlos
+             en el tópico `/joint_states`, utilizado generalmente por nodos de visualización o controladores.
+        -->
+
+        <!-- Plugin de control diferencial para las ruedas del robot -->
+        <plugin filename="ignition-gazebo-diff-drive-system" name="ignition::gazebo::systems::DiffDrive">
+            <left_joint>left_wheel_joint</left_joint> <!-- Articulación de la rueda izquierda -->
+            <right_joint>right_wheel_joint</right_joint> <!-- Articulación de la rueda derecha -->
+            <frame_id>odom</frame_id> <!-- Marco de referencia para la odometría -->
+            <wheel_separation>0.297</wheel_separation> <!-- Separación entre las ruedas -->
+            <wheel_radius>0.033</wheel_radius> <!-- Radio de las ruedas -->
+            <odom_publish_frequency>20</odom_publish_frequency> <!-- Frecuencia de publicación de la odometría -->
+            
+            <!-- Configuración de aceleraciones máximas y mínimas -->
+            <max_linear_acceleration>1</max_linear_acceleration>
+            <min_linear_acceleration>-1</min_linear_acceleration>
+            <max_angular_acceleration>2</max_angular_acceleration>
+            <min_angular_acceleration>-2</min_angular_acceleration>
+            
+            <!-- Configuración de velocidades máximas y mínimas -->
+            <max_linear_velocity>0.5</max_linear_velocity>
+            <min_linear_velocity>-0.5</min_linear_velocity>
+            <max_angular_velocity>1</max_angular_velocity>
+            <min_angular_velocity>-1</min_angular_velocity>
+        </plugin>
+        <!-- 
+             Este plugin permite que Gazebo interprete los comandos enviados al tópico `/cmd_vel`
+             y controle las ruedas diferenciales del robot.
+        -->
+    </gazebo>
+</robot>
